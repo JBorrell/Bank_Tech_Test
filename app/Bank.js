@@ -5,7 +5,7 @@ function Bank() {
 
 Bank.prototype.deposit = function (amount) {
   this.balance += amount
-  this.transactions.push([this._getDate(), 'DEPOSIT', amount])
+  this.transactions.push([this._getDate(), 'DEPOSIT', amount, this.balance])
 };
 
 Bank.prototype.withdraw = function (amount) {

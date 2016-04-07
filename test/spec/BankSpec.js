@@ -37,6 +37,10 @@ describe("Bank", function() {
       expect(bank.transactions[0][1]).toEqual("DEPOSIT");
       expect(bank.transactions[1][1]).toEqual("WITHDRAW");
     })
+    it("shows remaining balance", function(){
+      bank.deposit(8);
+      expect(bank.transactions[0][3]).toEqual(8);
+    })
   });
 
 });
